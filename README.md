@@ -1,1 +1,3 @@
-# train-scheduler
+ For the train-scheduler I used  bootstrap in my HTML to create a simple, yet modern and interactive website. The trainscheduler is meant to document an individuals train of choice and calculate the time it would take for the train to arrive. 
+
+ Using moment.js , I created a function in the code that could calculate the amount of time the user would have to wait for the next train ride. I also used firebase in order to store the users new train reservation. Firebase allows for the users input to remain stored, so then the user can see the recent train reservations on the site. 

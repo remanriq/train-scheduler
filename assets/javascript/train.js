@@ -33,6 +33,7 @@ var newTrain = {
 	destination: destination,
 	firstTime: firstTime,
 	frequency: frequency,
+	dateAdded: firebase.database.ServerValue.TIMESTAMP
 
 }
 	database.ref().push(newTrain);
@@ -71,12 +72,16 @@ var frequency = childSnapshot.val().frequency;
   	
 
     // First Time (pushed back 1 year to make sure it comes before current time)
+    //class example to show the difference in time 
+    //var differentTimes = moment().diff(moment.unix(tFirstTrain), "minutes");
+
+
 
     var currentTime = moment();
     console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm A"));
 
 
-    var firstTimeConverted = moment(firstTime, "hh:mm A").subtract(1, "days");
+    var firstTimeConverted = moment(firstTime, "hh:mm A").subtract(1, "years");
     
 
     // Current Time
